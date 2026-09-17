@@ -1,4 +1,4 @@
 #!/bin/bash
 
-palabra=$1
-grep -rl home $palabra
+carpeta=$1
+grep -rl home $carpeta
