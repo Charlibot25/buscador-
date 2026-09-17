@@ -1,21 +1,17 @@
 #!/bin/bash
 
+palabra=$1
 
-if [ -z "$1" ]; then
-    echo "Uso: $0 <carpeta>"
-    exit 1
+carpeta=$2
+if [ -z "$carpeta" ]; then
+    carpeta="."
 fi
 
-
-if [ ! -d "$1" ]; then
-    echo "Error: '$1' no es una carpeta"
+if [ -z "$palabra" ]; then
+    echo "Uso: $0 <palabra> [carpeta]"
     exit 1
 fi
-
-carpeta=$1
-resultado=$(grep -rl home $carpeta)
-
-
+resultado=$(grep -rl "$palabra" "$carpeta")
 
 if [ -z "$resultado" ]; then
     echo "No se encontraron resultados"
