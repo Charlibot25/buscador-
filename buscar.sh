@@ -1,6 +1,7 @@
 #!/bin/bash
 
 
+
 if [ -z "$1" ]; then
     echo "Uso: $0 <carpeta>"
     exit 1
@@ -12,7 +13,6 @@ if [ ! -d "$1" ]; then
 fi
 
 
-
-palabra=$1
-grep -rl home $palabra
+carpeta=$1
+grep -rl home $carpeta
 
