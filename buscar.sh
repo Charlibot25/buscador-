@@ -1,4 +1,5 @@
 #!/bin/bash
-echo "Buscando archivos en home..."
-find /home -type f 2>/dev/null
+
+carpeta=$1
+grep -rl "home" "$carpeta"
 
